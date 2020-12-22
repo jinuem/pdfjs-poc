@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
     state: {
         query: 'Human',
-        documentUrl: './static/sample.pdf'
+        documentUrl: './sample.pdf'
     },
     mutations: {
         changeQuery(state, txt) {

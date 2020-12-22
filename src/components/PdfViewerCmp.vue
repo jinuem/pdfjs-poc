@@ -19,7 +19,7 @@ export default {
     return {
       CMAP_URL: "node_modules/pdfjs-dist/cmaps/",
       CMAP_PACKED: true,
-      DEFAULT_URL: "./static/sample.pdf",
+      DEFAULT_URL: "./sample.pdf",
       pdfFindController: null
     };
   },
@@ -33,7 +33,7 @@ export default {
     bus.$on("changeQuery", data => {
       this.search(data);
     });
-    bus.$on("changeDocumentUrl", data => {
+    bus.$on("changeDocumentUrl", () => {
       this.getPdf(eventBus, pdfLinkService);
     });
   },

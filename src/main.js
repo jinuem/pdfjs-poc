@@ -6,10 +6,9 @@ import router from './router'
 export const bus = new Vue();
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  render(createElement) {
+    return createElement(App);
+  }
+}).$mount('#app');
